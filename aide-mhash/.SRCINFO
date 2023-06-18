@@ -1,0 +1,27 @@
+pkgbase = aide-mhash
+	pkgdesc = A file integrity checker and intrusion detection program, compiled with mhash support.
+	pkgver = 0.18.3
+	pkgrel = 4
+	url = https://aide.github.io/
+	install = .INSTALL
+	arch = x86_64
+	license = GPL
+	depends = acl
+	depends = e2fsprogs
+	depends = libelf
+	depends = mhash-pkg-config
+	depends = pcre
+	backup = etc/aide.conf
+	source = https://github.com/aide/aide/releases/download/v0.18.3/aide-0.18.3.tar.gz
+	source = https://github.com/aide/aide/releases/download/v0.18.3/aide-0.18.3.tar.gz.asc
+	source = aide.conf
+	source = aidecheck.service
+	source = aidecheck.timer
+	validpgpkeys = 2BBBD30FAAB29B3253BCFBA6F6947DAB68E7B931
+	sha256sums = d47da12c4bf085bfdf1828e087a1db5195a4d217ff4c89f40dbd94e2a887a6a2
+	sha256sums = SKIP
+	sha256sums = 47a8fced6e1f2afae07d521b3701dbd280b3039254d84c8342f981b9a6d943d4
+	sha256sums = fc7bd68dccc0e8694bb5a001fb6a80514f1380e41b95742e19d19b3172b22878
+	sha256sums = 1eeb977faa98e4e5f6f6b111f4e933c162b6e72d4c65adef85430cf2f34ad9c5
+
+pkgname = aide-mhash

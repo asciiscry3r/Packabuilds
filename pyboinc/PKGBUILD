@@ -1,0 +1,44 @@
+# Maintainer: Pellegrino Prevete <pellegrinoprevete@gmail.com>
+# Contributor: Felix Yan <felixonmars@archlinux.org>
+
+# shellcheck disable=SC2034
+_name="pyboinc"
+_pkgbase="${_name}"
+pkgbase="${_name}"
+pkgname=("${pkgbase}")
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="PyBOINC - a very basic python BOINC bridge"
+url="https://github.com/nielstron/pyboinc"
+license=('MIT')
+arch=(any)
+source=("git+https://github.com/nielstron/pyboinc.git")
+sha1sums=('SKIP')
+
+makedepends=(python-xmltodict python-build python-installer python-wheel)
+
+build() {
+    cd "$_name"
+    python -m build --wheel --no-isolation
+}
+
+package() {
+    cd "$_name"
+    python -m installer --destdir="$pkgdir" dist/*.whl
+}
+
+#build() {
+#  cd "${_name}" || exit
+#  python setup.py develop
+#}
+
+# shellcheck disable=SC2154
+#package() {
+#  depends=('python')
+#
+#  cd "${_name}" || exit
+#  python setup.py install --root="${pkgdir}" --optimize=1
+#
+#  install -Dm644 LICENSE -t "${pkgdir}"/usr/share/licenses/${pkgbase}/
+#}
+

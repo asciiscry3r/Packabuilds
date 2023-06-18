@@ -1,0 +1,11 @@
+This package is a fork of: https://aur.archlinux.org/packages/aide
+
+The purposes of this fork are:
+- to compile with mhash support by depending on mhash-pkg-config which includes the necessary pkg-config file (mhash.pc)
+- to provide a more recent/updated version of AIDE
+- to fix the source fork which cannot build properly due to missing sha256sums
+- to provide a more expanded aide.conf file than the source fork
+
+This package is hosted on github here: https://github.com/matthewspangler/aide-aur
+
+The the mhash package that this package depends on is hosted on Github here: https://github.com/matthewspangler/mhash-pkg-config
